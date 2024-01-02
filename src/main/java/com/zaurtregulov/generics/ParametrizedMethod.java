@@ -5,6 +5,11 @@ import java.util.ArrayList;
 public class ParametrizedMethod {
     public static void main(String[] args) {
         ArrayList<Integer> al1 = new ArrayList<>();
+// ArrayListal1 = new ArrayList();
+        int i = al1.get(0);
+        //int i =(Integer) al1.get(0);
+
+
         al1.add(10);
         al1.add(20);
         al1.add(5);
@@ -15,7 +20,7 @@ public class ParametrizedMethod {
         al2.add("abc");
         al2.add("def");
         al2.add("ghi");
-         String s = GenMethod.getSecondElement(al2);
+        String s = GenMethod.getSecondElement(al2);
         System.out.println(s);
     }
 }
