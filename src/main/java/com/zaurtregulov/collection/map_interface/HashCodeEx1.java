@@ -33,7 +33,7 @@ public class HashCodeEx1 {
     }
 }
 
-final class Student {
+final class Student implements Comparable<Student> {
     final String name;
     final String surname;
     final int course;
@@ -53,7 +53,7 @@ final class Student {
                 '}';
     }
 
-    @Override
+/*    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -64,6 +64,11 @@ final class Student {
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, course);
+    }*/
+
+    @Override
+    public int compareTo(Student o) {
+        return this.name.compareTo(o.name);
     }
  /*  @Override
    public int hashCode() {
